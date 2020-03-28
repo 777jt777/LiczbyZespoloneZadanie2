@@ -21,14 +21,16 @@ struct  LZespolona {
 /*
  * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
  */
-LZespolona utworz(double re , double im );
-LZespolona sprzezenie(double re, double im);
-void wyswietl(LZespolona LZ);
+
+LZespolona dzielenie(LZespolona Skl1, double x);
+LZespolona sprzezenie(LZespolona LZ);
+double modul(LZespolona LZ);
 LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
 std::istream & operator >>(std::istream & strm, LZespolona & Skl);
 std::ostream & operator << (std::ostream & strm, const LZespolona & Skl);
+bool operator ==(LZespolona  Skl1,  LZespolona  Skl2);
 
 #endif

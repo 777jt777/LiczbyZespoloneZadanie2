@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <cassert>
-#include "BazaTestu.hh"
+#include "../inc/BazaTestu.hh"
 using namespace std;
 
 /*
@@ -16,9 +16,15 @@ static WyrazenieZesp  TestLatwy[] =
   };
 
 /*
- * Analogicznie zdefiniuj test "trudne"
- *
+ Tresc testu trudnego
+ 
  */
+static WyrazenieZesp  TestTrudny[] =
+  { {{24,12}, Op_Dodaj, {14,-2}},
+    {{14,10}, Op_Odejmij, {40,1}},
+    {{3,-7}, Op_Mnoz, {9,3}},
+    {{4,34}, Op_Dziel, {1,-23}},
+  };
 
 
 
@@ -74,6 +80,10 @@ bool InicjalizujTest( BazaTestu  *wskBazaTestu, const char *sNazwaTestu )
 {
   if (!strcmp(sNazwaTestu,"latwy")) {
     UstawTest(wskBazaTestu,TestLatwy,sizeof(TestLatwy)/sizeof(WyrazenieZesp));
+    return true;
+  }
+  else if(!strcmp(sNazwaTestu,"trudny")) {
+    UstawTest(wskBazaTestu,TestTrudny,sizeof(TestTrudny)/sizeof(WyrazenieZesp));
     return true;
   }
   /*
