@@ -6,8 +6,11 @@
 #include <climits>
 using namespace std;
 /* UWAGA */
-/* Zalaczaczenie poziomu trudnosci wiaze sie z zamiana ,,latwy" na ,,trudny" w makefile */
-
+/* Wywolanie poziomu trudnosci testu odpbywa sie przez wejscie do katalogu z plikiem i wywolania:
+./test_arytm_zesp  trudny
+lub
+./test_arytm_zesp  latwy
+   */
 
 
 
@@ -72,13 +75,13 @@ int main(int argc, char **argv)
      if(ans==wynik)
      {
       cout << ":) Odpowiedz poprawna";
-      poprawna(odp); /* dodanie odpowiedzi porpawnej do statystyki */
+      poprawna(odp); /* dodanie odpowiedzi poprawnej do statystyki */
      }  
      else
      {
        cout << " :( Blad. Prawidlowym wynikiem jest: ";
        cout << wynik;
-       niepoprawna(odp);   /* dodanie odpowiedzi nieporpawnej do statystyki */
+       niepoprawna(odp);   /* dodanie odpowiedzi niepoprawnej do statystyki */
      }   
      cout <<endl;
   }
