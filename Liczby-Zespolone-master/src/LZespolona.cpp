@@ -31,7 +31,7 @@ LM=sqrt(pow(LZ.re,2)+pow(LZ.im,2));
 return LM;
 }
 
-/* Definicja dzielenia przez lcizbe rzeczyiwsta  */
+/* Definicja dzielenia przez liczbe rzeczyiwsta  */
 LZespolona dzielenie(LZespolona Skl1, double x){
 LZespolona Wynik;
 if(x!=0){
